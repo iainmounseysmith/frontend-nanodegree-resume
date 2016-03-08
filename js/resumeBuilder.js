@@ -51,13 +51,13 @@ var bio ={
 		{"title":"project1",
 		"date":"date",
 		"description":"desc",
-		"images":["images/spurs.jpg"]
+		"images":[]
 					},
 		{
 			"title":"project1",
 		"date":"date",
 		"description":"desc",
-		"images":["images/spurs.jpg"]
+		"images":[]
 		}
 				]
 	}
@@ -69,9 +69,7 @@ var bio ={
 		$("#projects").append(HTMLprojectTitle.replace("%data%",projects.projects[proj].title));
 		$("#projects").append(HTMLprojectDates.replace("%data%",projects.projects[proj].date));
 		$("#projects").append(HTMLprojectDescription.replace("%data%",projects.projects[proj].description));
-console.log("length "+ projects.projects[proj].images.length);
 		if (projects.projects[proj].images.length>0){
-			console.log("length inside"+ projects.projects[proj].images.length);
 			for (image in projects.projects[proj].images){
 				$("#projects").append(HTMLprojectImage.replace("%data%",projects.projects[proj].images[image]));
 			}
@@ -188,3 +186,5 @@ function inName(){
 		var internationalizedName=(newNameArray[0].trim().slice(0,1).toUpperCase() + newNameArray[0].trim().slice(1)+ " " + newNameArray[1].toUpperCase());
 		return internationalizedName;
 }
+
+$("#mapDiv").append(googleMap);
